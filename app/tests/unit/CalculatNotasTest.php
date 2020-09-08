@@ -5,7 +5,7 @@ namespace UnitTestFiles\Test;
 use App\Service\CalculationService;
 use PHPUnit\Framework\TestCase;
 
-class FirstTest extends TestCase
+class CalcularNotasTest extends TestCase
 {
     public function test_assert_reprovado()
     {
