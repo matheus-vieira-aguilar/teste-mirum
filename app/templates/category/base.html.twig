@@ -1,0 +1,24 @@
+<h2>Categories</h2>
+
+<a href="{{ path('category_create')}}"> Create </a>
+<a href="{{ path('default_index')}}"> Go back </a>
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>     
+    <th> </th>     
+  </tr>
+
+  {% for category in categories %}
+    <tr>
+        <td>{{category.id}}</td>
+        <td>{{category.name}}</td>    
+        <td><a href="{{ path('category_update', { id : category.id }) }}"> Update </a> </td>    
+        <td><a href="{{ path('category_delete', { id : category.id }) }}"> Delete </a> </td>    
+    </tr>    
+  {% else %}
+      <tr>
+        <td>None Category was found it</td>        
+     </tr> 
+  {% endfor %}
+</table>

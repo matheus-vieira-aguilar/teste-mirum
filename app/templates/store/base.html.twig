@@ -1,0 +1,26 @@
+<h2>Store</h2>
+
+<a href="{{ path('store_create')}}"> Create </a>
+<a href="{{ path('default_index')}}"> Go back </a>
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>     
+    <th>Address</th>     
+    <th> </th>     
+  </tr>
+
+  {% for store in stores %}
+    <tr>
+        <td>{{store.id}}</td>
+        <td>{{store.name}}</td>    
+        <td>{{store.address}}</td>    
+        <td><a href="{{ path('store_update', { id : store.id }) }}"> Update </a> </td>    
+        <td><a href="{{ path('store_delete', { id : store.id }) }}"> Delete </a> </td>    
+    </tr>    
+  {% else %}
+      <tr>
+        <td>None Category was found it</td>        
+     </tr> 
+  {% endfor %}
+</table>

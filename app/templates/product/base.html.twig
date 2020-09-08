@@ -1,0 +1,26 @@
+<h2>Products</h2>
+
+<a href="{{ path('product_create')}}"> Create </a>
+<a href="{{ path('default_index')}}"> Go back </a>
+<table style="width:100%">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>     
+    <th>Price</th>     
+    <th> </th>     
+  </tr>
+
+  {% for product in products %}
+    <tr>
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>    
+        <td>{{product.price}}</td>    
+        <td><a href="{{ path('product_update', { id : product.id }) }}"> Update </a> </td>    
+        <td><a href="{{ path('product_delete', { id : product.id }) }}"> Delete </a> </td>    
+    </tr>    
+  {% else %}
+      <tr>
+        <td>None Product was found it</td>        
+     </tr> 
+  {% endfor %}
+</table>
