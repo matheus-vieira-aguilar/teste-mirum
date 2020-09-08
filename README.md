@@ -1,5 +1,7 @@
 # README - teste Mirum
 
+Esse projeto é construido utilizando em conjunto o framework Symfony 5, php 7.4 e Mysql 8
+
 Como levantar o docker configurado:
 
 ```jsx
